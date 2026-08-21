@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> contato </h1>
+
+    <style>
+        
+        body {
+                font-family: system-ui,
+                -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 19px;
+                
+        }
+        select {
+            font-family: inherit;
+            /* font-size: 19px;*/
+            font-size: inherit;
+            margin-bottom: 10px;
+        }
+        label,fieldset, button{
+            font-weight: bold;
+            display: block;
+            margin-block-end: 10px;
+            margin-block-start: 30px;
+        }
+        fieldset label{
+            font-weight: normal;
+            display: inline;
+            
+        }
+        h1, fieldset {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        input,fieldset,select,textarea{
+            margin-bottom: 1rem;
+            padding: 5px;
+            border: 2px solid rgb(167, 166, 166);
+            border-radius: 10px;
+        }
+        
+        button {
+  width: 250px;
+  height: 100px;
+  background: #0a2342; /* Cor de fundo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+  border: none; /* Remove a borda padrão */
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    #0ff 0deg,
+    #0a2342 120deg,
+    #0ff 240deg
+  );
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+
+button:hover {
+  border-radius: 10px;
+  transform: rotate(15deg);
+}
+
+button:hover::before {
+  opacity: 0.5;
+  transform: scale(2);
+}
+
+        
+
+    </style>
+
+    <form method="post" action="https://professores.unisanta.br/sobrino/scripts/mostra-v2.php">
+        
+        <label for="email"> e-mail </label>
+        <input 
+        type="email" name="email" id="email" 
+        size="30" maxlength="30" 
+        placeholder="seu e-mail" required>
+        
+
+        
+        <label for="telefone"> telefone </label>
+        <input 
+        type="tel" name="telefone" id="telefone" 
+        size="15" maxlength="15" 
+        placeholder="seu telefone" required>
+        
+
+        
+            <label for="mensagem"> mensagem </label>
+            
+
+            <textarea 
+            name="mensagem" id="mensagem" 
+            rows="5" cols="35">
+            </textarea>
+        
+
+        
+            <label for="cidade"> cidade </label>
+            
+
+            <select name="cidade" id="cidade" required>
+                <option value=""> selecione... </option>
+                <option value="BT"> Bertioga </option>
+                <option value="CB"> Cubatão </option>
+                <option value="GR"> Guarujá </option>
+                <option value="IT"> Itanhaém </option>
+                <option value="MG"> Mongaguá </option>
+                <option value="PR"> Peruíbe </option>
+                <option value="PG"> Praia Grande </option>
+                <option value="ST"> Santos </option>
+                <option value="SV"> São Vicente </option>
+            </select>
+
+        
+        
+        <fieldset>
+            <legend>você é aluno da unisanta?</legend>
+                <input type="radio" name="aluno" id="aluno-S" 
+                value="sim">
+                <label for="aluno-S">sim</label>
+
+                <input type="radio" name="aluno" id="aluno-N" 
+                value="não">
+                <label for="aluno-N">não</label>
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>quais são suas linguagens de programação favoritas?</legend>
+                <input type="checkbox" name="linguagens[]" id="linguagens-C#" 
+                value="C#">
+                <label for="linguagens-C#">C#</label>
+                <input type="checkbox" name="linguagens[]" id="linguagens-java" 
+                value="java">
+                <label for="linguagens-java">java</label>
+                <input type="checkbox" name="linguagens[]" id="linguagens-pythom" 
+                value="python">
+                <label for="linguagens-phyton">phyton</label>
+                <input type="checkbox" name="linguagens[]" id="linguagens-javascript" 
+                value="javascript">
+                <label for="linguagens-C#">javascript</label>
+
+
+        </fieldset>
+        
+        <!-- <input type="submit" value="avançar"-->
+        <button>enviar</button>
+
+    </form>
+
+</body>
+</html>

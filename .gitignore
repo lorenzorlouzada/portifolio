@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+**/.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.pdb
+
+# NuGet packages (restaurados automaticamente)
+**/packages/
+*.nupkg
+
+# Build binaries
+*.exe
+*.dll
+
+# Archives
+*.rar
+
+# OS
+.DS_Store
+Thumbs.db
